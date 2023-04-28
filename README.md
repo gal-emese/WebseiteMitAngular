@@ -1,5 +1,5 @@
 # Website für Museen
-Bilder, Museen, Periodische Ausstelungen
+Bilder, Museen, Periodische Ausstellungen
 
 # Verwendete Technologien
 Angular, Angular Material, Firebase
