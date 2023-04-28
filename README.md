@@ -1,3 +1,9 @@
+# Website für Museen
+Bilder, Museen, Periodische Ausstelungen
+
+# Verwendete Technologien
+Angular, Angular Material, Firebase
+
 # Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
