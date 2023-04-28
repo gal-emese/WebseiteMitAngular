@@ -1,0 +1,77 @@
+<div class="button">
+    <button class="first" (click)="getExhibitions()"  color="accent" mat-raised-button> Click here to show exhibitions! </button>
+</div>
+
+<div class="formdiv">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let exhibition of exhibitionsFromDB">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle (click)="calculateDate(exhibition.Anfang, exhibition.Ende)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{exhibition.Titel}}
+            </mat-panel-title>
+            <mat-panel-description>
+              at {{exhibition.MuseumName}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p> Paintings of {{exhibition.Maler}} </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div class="inputform">
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter exhibition title</mat-label>
+      <input matInput type="text" [(ngModel)]="newTitel">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter artist name</mat-label>
+      <input matInput type="text" [(ngModel)]="newMaler">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width" appearance="fill"> 
+      <mat-label>Name of the museum</mat-label>
+      <input type="text"
+                 placeholder="Pick museum!"
+                 aria-label="Museum"
+                 matInput
+                [matAutocomplete]="auto"
+                [(ngModel)]="newMuseumName">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" >
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+        
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="rangePicker">
+          <input matStartDate placeholder="Start date" (dateChange)="startDateChanged($event)">
+          <input matEndDate placeholder="End date" (dateChange)="endDateChanged($event)">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="rangePicker"></mat-datepicker-toggle>
+      
+        <mat-date-range-picker #rangePicker>
+          <mat-date-range-picker-actions>
+            <button mat-button matDateRangePickerCancel>Cancel</button>
+            <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+          </mat-date-range-picker-actions>
+        </mat-date-range-picker>
+      </mat-form-field>
+<button class="exhibitionButton" color="accent" (click)="addExhibition()" mat-raised-button>Add exhibition</button>
+</div> 
+    
+

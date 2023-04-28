@@ -1,0 +1,22 @@
+<div class="button">
+    <button class="first" (click)="getPaintings()" color="accent" mat-raised-button> Click here for paintings! </button>
+</div> 
+
+<ul>
+<li *ngFor="let painting of paintingsFromDB">
+<a routerLink="/Painting/{{painting.Id}}">
+<mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>{{painting.Titel}}</mat-card-title>
+      <mat-card-subtitle>{{painting.MuseumName}}</mat-card-subtitle>
+      <button mat-icon-button matTooltip="Primary" color="{{painting.FavColor}}" (click)="changeFavColor(painting)" aria-label="Heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-card-header>
+    <img mat-card-image src="{{painting.ImageUrl}}" alt="{{painting.Titel}}">
+</mat-card>
+</a>
+<mat-divider></mat-divider>
+</li>
+</ul>

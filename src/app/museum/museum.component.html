@@ -1,0 +1,27 @@
+<body>
+<div class="button">
+<button class="first" (click)="getMuseums()"  color="accent" mat-raised-button> Click here for museums! </button>
+</div>
+
+<div>
+<ul>
+    <li *ngFor="let museum of museumsFromDB">
+    <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{museum.Name}}</mat-card-title>
+        </mat-card-header>
+
+        <img mat-card-image src="{{museum.ImageUrl}}" alt="{{museum.Name}}">
+        <button  class="detailsButton" mat-button (click) = "changeDetails()" >
+             {{museum.Land}}
+        <section class="city" *ngIf="showCity===true">
+            {{museum.Stadt}}
+            </section>
+        </button>
+    </mat-card>
+    <mat-divider></mat-divider>
+    </li>
+</ul>
+</div>
+</body>

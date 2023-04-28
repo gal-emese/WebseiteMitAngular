@@ -1,0 +1,72 @@
+mat-card-header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    max-width: 400px;
+}
+
+.header-image {
+    background-image: url('/assets/images/paintings/brush.jpg');
+    background-size: cover;
+}
+
+mat-card-title{
+    color: rgb(75, 14, 75);
+    font-family: "Brush Script MT";
+    font-size: 1.4rem;
+}
+
+mat-card-subtitle {
+    font-size: 1.2rem;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+  
+ul li a {
+    height: 29rem;
+    width: 25rem;
+    border: 1px solid rgb(44, 59, 22);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: brown;
+    text-decoration: none;
+}
+
+li a:active{
+    text-decoration: none;
+}
+
+li a:visited{
+    text-decoration: none;
+}
+
+li a:hover {
+    opacity: 80%;
+  
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.first {
+    width: 390px;
+    font-size: large;
+}

@@ -1,0 +1,70 @@
+mat-card-header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    max-width: 400px;
+}
+
+.header-image {
+    background-image: url('/assets/images/museums/museum.png');
+    background-size: cover;
+}
+
+mat-button {
+    height:10rem;
+}
+
+mat-card-title{
+    color: rgb(132, 76, 27);
+    font-family: "Brush Script MT";
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+  
+ul li {
+    height: 25rem;
+    width: 25rem;
+    border: 1px solid rgb(44, 59, 22);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: brown;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.detailsButton {
+    font-size: 2 rem;
+    height: 4.3rem;
+}
+
+.first {
+    width: 390px;
+    font-size: large;
+}
+
+mat-card-title {
+    font-size: 1.8rem;
+}
+
+mat-card-subtitle {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,19 @@
+<p>paintingpage works!</p>
+<app-not-found [visible]="!painting" notFoundMessage="Painting not found!" resetLinkText="Back to homepage"> </app-not-found> 
+<div *ngIf="painting" class="container">
+    <img [src]="painting.ImageUrl" [alt]="painting.Titel">
+    <div class="details">
+        <div class="header">
+            <span class="title">
+                {{painting.Titel}}
+            </span>
+        </div>
+
+        <div class="description">
+            <span>
+                This painting was made in {{painting.Jahr}}.
+                {{painting.Deskription}}
+            </span>
+        </div>
+    </div>
+</div>

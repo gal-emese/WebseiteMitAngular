@@ -1,0 +1,23 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+header {
+    width: 100%;
+    background: #DD8250;
+    background: -moz-linear-gradient(top, #f19867 0%, #DD9768 49%, #DD8250 100%);
+    background: -webkit-linear-gradient(top, #DD8250 0%, #DD9768 49%, #DD8250 100%);
+    background: linear-gradient(to bottom, #DD8250 0%, #DD9768 49%, #DD8250 100%);
+    color: #975835;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+mat-tab-group .mat-tab-label {
+    font-size: 200px;
+
+}
+
+::ng-deep .mat-tab-label {
+    font-size: x-large;
+}

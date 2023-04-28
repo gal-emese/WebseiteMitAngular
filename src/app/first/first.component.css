@@ -1,0 +1,40 @@
+.quote {
+        display: flex;
+        justify-content: center;
+        font-size: medium;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        color: rgb(75, 14, 75);
+        font-family: "Brush Script MT";
+        font-size: 1.9rem;
+        letter-spacing: .1rem;
+        line-height: 1.7em;
+}
+
+.painting {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+}
+
+img{
+        background-origin: padding-box;
+        border-radius: 2px;
+}
+
+.artist {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: rgb(107, 21, 21);
+        font-weight: bold;
+        font-size: larger;
+}
+
+#container {
+        width: 85%;
+        margin: 0 auto;
+}
